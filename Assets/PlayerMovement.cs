@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 5.0f;
     public Rigidbody rb; // Rigidbody 변수
     public bool isGrounded = true;
+    public int coinCount = 0;
+    public int totalCoins = 5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,5 +42,18 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Coin"))
+        {
+            coinCount++;
+            Destroy(other.gameObject);
+            Debug.Log($"코인 수집 : {coinCount}/{totalCoins}");
+        }
+        if (other.CompareTag("Door") && coinCount >= totalCoins)
+        {
+            Debug.Log("게임 클리어");
+        }
     }
 }
