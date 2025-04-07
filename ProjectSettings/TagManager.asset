@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Coin
+  - Door
+  - Misslie
   layers:
   - Default
   - TransparentFX
