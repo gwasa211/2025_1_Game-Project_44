@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/dsf.unity
+    path: Assets/Scenes/dsf.unity
     guid: 150bca5e20a73d249adc2bb5938aaf9b
   m_configObjects: {}
